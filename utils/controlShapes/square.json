@@ -1,0 +1,72 @@
+{
+	"knots": [
+		0.0, 
+		1.0, 
+		2.0, 
+		3.0, 
+		4.0
+	], 
+	"parent": "|controlShapes|square", 
+	"form": 0, 
+	"overrideColorRGB": [
+		0.0, 
+		0.0, 
+		0.0
+	], 
+	"overrideColor": 0, 
+	"shape": "squareShape", 
+	"overrideEnabled": false, 
+	"pivot": [
+		0.0, 
+		0.0, 
+		0.0
+	], 
+	"degree": 1, 
+	"overrideRGBColors": false, 
+	"name": "square", 
+	"cvs": [
+		[
+			-1.0, 
+			0.0, 
+			-1.0
+		], 
+		[
+			-1.0, 
+			0.0, 
+			1.0
+		], 
+		[
+			1.0, 
+			0.0, 
+			1.0
+		], 
+		[
+			1.0, 
+			0.0, 
+			-1.0
+		], 
+		[
+			-1.0, 
+			0.0, 
+			-1.0
+		]
+	], 
+	"xform": [
+		1.0, 
+		0.0, 
+		0.0, 
+		0.0, 
+		0.0, 
+		1.0, 
+		0.0, 
+		0.0, 
+		0.0, 
+		0.0, 
+		1.0, 
+		0.0, 
+		0.0, 
+		0.0, 
+		-9.0, 
+		1.0
+	]
+}
