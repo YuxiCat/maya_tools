@@ -104,14 +104,13 @@ class IO_Dialog(QtWidgets.QDialog):
         super(IO_Dialog, self).__init__(parent)
 
         self.setupUi()
-        # self.initialize()
         self.setupSlots()
         self.setWindowTitle("dataIO")
         self.setWindowFlags(QtCore.Qt.Window)
         self.setAttribute(QtCore.Qt.WA_DeleteOnClose)
         self.setStyleSheet(STYLESHEET)
         self.nameFilter = JSON_FILTER
-        # app.addFonts(FONT_PATH)
+        app.addFonts(FONT_PATH)
 
     # ------- setup ------- #
     def setupUi(self):
@@ -559,7 +558,6 @@ class IO_Dialog(QtWidgets.QDialog):
         if not app.isValidPath(filepath):
             LOG.error('Filepath is not valid. {0}'.format(filepath))
             return
-        # control.importExportControlCurves(filepath, export=True)
         controls.exportControlCurves(filepath)
 
     def exportChannel(self):
@@ -633,10 +631,6 @@ class IO_Dialog(QtWidgets.QDialog):
         if not app.isValidPath(filepath):
             LOG.error('Filepath is not valid. {0}'.format(filepath))
             return
-        # if self.data['checkbox']['targets'].isChecked():
-        #     exportTarget = 1
-        # else:
-        #     exportTarget = 0
         blendshapes.exportBlendShapes(filepath, bShp, exportTarget=0)
 
     def exportPose(self):
