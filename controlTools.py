@@ -39,12 +39,13 @@ class control_Dialog(QtWidgets.QDialog):
         self.setDefault()
         self.setWindowTitle("Control Factory")
         self.setWindowFlags(self.windowFlags() |
-                      QtCore.Qt.WindowMaximizeButtonHint |
-                      QtCore.Qt.WindowMinimizeButtonHint |
-                      QtCore.Qt.WindowCloseButtonHint |
-                      QtCore.Qt.Window |
-                      QtCore.Qt.WindowStaysOnTopHint |
-                      WINTYPE)
+                            QtCore.Qt.WindowMaximizeButtonHint |
+                            QtCore.Qt.WindowMinimizeButtonHint |
+                            QtCore.Qt.WindowCloseButtonHint |
+                            QtCore.Qt.Window |
+                            QtCore.Qt.WindowStaysOnTopHint |
+                            WINTYPE)
+        self.setAttribute(QtCore.Qt.WA_DeleteOnClose)
 
     # ------- setup ------- #
     def setupUi(self):

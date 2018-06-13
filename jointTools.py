@@ -5,7 +5,7 @@
 # reload(jointTools)
 # jointTools.show()
 
-import sys, os
+import sys
 import maya.cmds as cmds
 from vendor.Qt import QtGui, QtWidgets, QtCore
 from utils import joints as jo
@@ -38,12 +38,13 @@ class joint_Dialog(QtWidgets.QDialog):
         self.setupSlots()
         self.setWindowTitle("Joint Factory")
         self.setWindowFlags(self.windowFlags() |
-                      QtCore.Qt.WindowMaximizeButtonHint |
-                      QtCore.Qt.WindowMinimizeButtonHint |
-                      QtCore.Qt.WindowCloseButtonHint |
-                      QtCore.Qt.Window |
-                      QtCore.Qt.WindowStaysOnTopHint |
-                      WINTYPE)
+                            QtCore.Qt.WindowMaximizeButtonHint |
+                            QtCore.Qt.WindowMinimizeButtonHint |
+                            QtCore.Qt.WindowCloseButtonHint |
+                            QtCore.Qt.Window |
+                            QtCore.Qt.WindowStaysOnTopHint |
+                            WINTYPE)
+        self.setAttribute(QtCore.Qt.WA_DeleteOnClose)
 
     # ------- setup ------- #
     def setupUi(self):
@@ -335,7 +336,7 @@ class joint_Dialog(QtWidgets.QDialog):
         """
         aimId = self.data['rbg']['aimAxis'].checkedId()
         upId = self.data['rbg']['upAxis'].checkedId()
-        
+
         if (upId - aimId) != 3:
             return
         if id <= 3:

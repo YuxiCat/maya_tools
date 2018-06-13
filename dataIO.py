@@ -647,5 +647,3 @@ class IO_Dialog(QtWidgets.QDialog):
             LOG.error('Filepath is not valid. {0}'.format(filepath))
             return
         pose.exportPose(filepath, sel)
-
-
